@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Baba Studio - Inspired by Parents, Designed for You</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .neon-text-cyan {
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.7),
+                         0 0 10px rgba(0, 255, 255, 0.7),
+                         0 0 20px rgba(0, 255, 255, 0.7),
+                         0 0 40px rgba(0, 255, 255, 0.5),
+                         0 0 80px rgba(0, 255, 255, 0.5);
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #00ffff;
+            text-shadow: 0 0 5px #00ffff;
+        }
+        .portfolio-item {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .filter-btn.active {
+            background-color: #00ffff;
+            color: #0a0a1a;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-black/50 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                     <a href="#home" class="text-xl md:text-2xl font-bold font-orbitron text-white neon-text-cyan">MA-BABA STUDIO</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">পরিচয়</a>
+                        <a href="#services" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">পরিষেবা</a>
+                        <a href="#portfolio" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">পোর্টফোলিও</a>
+                        <a href="#why-us" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">কেন আমরা?</a>
+                        <a href="#contact" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">যোগাযোগ</a>
+                    </div>
+                </div>
+                 <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white p-2">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+             <div id="mobile-menu" class="hidden md:hidden">
+                <a href="#about" class="block nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">পরিচয়</a>
+                <a href="#services" class="block nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">পরিষেবা</a>
+                <a href="#portfolio" class="block nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">পোর্টফোলিও</a>
+                <a href="#why-us" class="block nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">কেন আমরা?</a>
+                <a href="#contact" class="block nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">যোগাযোগ</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('ChatGPT Image Sep 3, 2025, 11_44_32 AM.jpg');">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="relative z-10 px-4">
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-orbitron text-white uppercase neon-text-cyan tracking-widest">Ma-Baba Studio</h1>
+                <p class="mt-4 text-lg sm:text-2xl text-cyan-200">Inspired by Parents, Designed for You</p>
+                <p class="mt-2 text-lg sm:text-2xl text-cyan-200">মা-বাবার স্বপ্ন, আপনার হাতে ছাপা</p>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 sm:py-24 bg-[#0f0f22]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">আমাদের পরিচয়</h2>
+                <div class="w-24 h-1 bg-cyan-400 mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-12">
+                    "Ma Baba Studio"-তে আপনাকে স্বাগত জানাই! আমাদের পথচলা শুরু হয়েছে একটি সহজ ভাবনা থেকে - বাবা-মায়ের স্নেহ এবং ভালোবাসার মতো যত্ন দিয়ে প্রতিটি ডিজাইন তৈরি করা। আমরা শুধু একটি ডিজাইন স্টুডিও নই; আমরা আপনার ভাবনা, আবেগ এবং ব্যবসাকে বাস্তবে রূপ দিই। আমাদের প্রতিটি কাজে থাকে নতুনত্ব, সৃষ্টিশীলতা এবং নিখুঁত গুণের প্রতিশ্রুতি। আপনার ব্র্যান্ড বা ব্যক্তিগত প্রয়োজনকে সুন্দরভাবে ফুটিয়ে তোলাই আমাদের মূল লক্ষ্য।
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/30">
+                        <h3 class="text-xl font-semibold text-cyan-400">Inspired by Parents, Designed for You.</h3>
+                    </div>
+                     <div class="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/30">
+                        <h3 class="text-xl font-semibold text-cyan-400">মা-বাবার স্বপ্ন, আপনার হাতে ছাপা।</h3>
+                    </div>
+                     <div class="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/30">
+                        <h3 class="text-xl font-semibold text-cyan-400">আপনার ভাবনার শৈল্পিক প্রকাশ।</h3>
+                    </div>
+                     <div class="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/30">
+                        <h3 class="text-xl font-semibold text-cyan-400">ডিজাইন দিয়ে সম্পর্ক গড়ি।</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 sm:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">আমাদের পরিষেবা</h2>
+                <div class="w-24 h-1 bg-cyan-400 mx-auto mb-12"></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-[#0f0f22] p-8 rounded-lg border border-gray-700/50 transform hover:scale-105 hover:border-cyan-400 transition-all duration-300">
+                        <div class="text-4xl text-cyan-400 mb-4"><i class="fas fa-id-card"></i></div>
+                        <h3 class="text-xl font-semibold text-white">ডিজাইন ও প্রিন্টিং</h3>
+                        <p class="text-gray-400 mt-2">ভিজিটিং কার্ড, পোস্টার, ব্যানার, ফ্লেক্স।</p>
+                    </div>
+                    <div class="bg-[#0f0f22] p-8 rounded-lg border border-gray-700/50 transform hover:scale-105 hover:border-cyan-400 transition-all duration-300">
+                        <div class="text-4xl text-cyan-400 mb-4"><i class="fas fa-tshirt"></i></div>
+                        <h3 class="text-xl font-semibold text-white">অ্যাপারেল প্রিন্টিং</h3>
+                        <p class="text-gray-400 mt-2">আপনার পছন্দের ডিজাইনে টি-শার্ট এবং অন্যান্য পোশাক প্রিন্ট।</p>
+                    </div>
+                    <div class="bg-[#0f0f22] p-8 rounded-lg border border-gray-700/50 transform hover:scale-105 hover:border-cyan-400 transition-all duration-300">
+                        <div class="text-4xl text-cyan-400 mb-4"><i class="fas fa-mug-hot"></i></div>
+                        <h3 class="text-xl font-semibold text-white">মার্চেন্ডাইজ প্রিন্টিং</h3>
+                        <p class="text-gray-400 mt-2">কফি মগ এবং অন্যান্য প্রমোশনাল আইটেম।</p>
+                    </div>
+                    <div class="bg-[#0f0f22] p-8 rounded-lg border border-gray-700/50 transform hover:scale-105 hover:border-cyan-400 transition-all duration-300">
+                        <div class="text-4xl text-cyan-400 mb-4"><i class="fas fa-gift"></i></div>
+                        <h3 class="text-xl font-semibold text-white">কাস্টমাইজড গিফট</h3>
+                        <p class="text-gray-400 mt-2">ফটো ফ্রেম এবং আপনার প্রিয়জনদের জন্য বিশেষ উপহার।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-16 sm:py-24 bg-[#0f0f22]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">আমাদের কিছু কাজ</h2>
+                    <div class="w-24 h-1 bg-cyan-400 mx-auto mb-8"></div>
+                </div>
+                <div class="flex justify-center space-x-2 sm:space-x-4 mb-8">
+                    <button class="filter-btn active px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="all">All</button>
+                    <button class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="print">Print</button>
+                    <button class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="merchandise">Merchandise</button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="portfolio-item group" data-category="print">
+                        <img class="rounded-lg w-full h-full object-cover" src="ChatGPT Image Sep 3, 2025, 11_43_56 AM.jpg" alt="Visiting Card">
+                    </div>
+                    <div class="portfolio-item group" data-category="print">
+                        <img class="rounded-lg w-full h-full object-cover" src="ChatGPT Image Sep 3, 2025, 11_44_22 AM.jpg" alt="Poster">
+                    </div>
+                    <div class="portfolio-item group" data-category="merchandise">
+                        <img class="rounded-lg w-full h-full object-cover" src="ChatGPT Image Sep 3, 2025, 11_44_41 AM.jpg" alt="Coffee Mug">
+                    </div>
+                     <div class="portfolio-item group" data-category="merchandise">
+                        <img class="rounded-lg w-full h-full object-cover" src="ChatGPT Image Sep 3, 2025, 11_45_01 AM.jpg" alt="T-Shirt">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="py-16 sm:py-24">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">কেন আমাদের বেছে নেবেন?</h2>
+                    <div class="w-24 h-1 bg-cyan-400 mx-auto mb-12"></div>
+                </div>
+                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                     <div class="flex items-start space-x-4">
+                         <div class="text-3xl text-cyan-400"><i class="fas fa-palette"></i></div>
+                         <div>
+                             <h3 class="text-xl font-semibold text-white">🎨 সৃজনশীল ডিজাইন</h3>
+                             <p class="text-gray-400 mt-1">আমরা আপনার ব্যবসাকে তুলে ধরার জন্য সেরা এবং আধুনিক ডিজাইন তৈরি করি।</p>
+                         </div>
+                     </div>
+                     <div class="flex items-start space-x-4">
+                         <div class="text-3xl text-cyan-400"><i class="fas fa-star"></i></div>
+                         <div>
+                             <h3 class="text-xl font-semibold text-white">⭐ উন্নত মানের প্রিন্ট</h3>
+                             <p class="text-gray-400 mt-1">আমরা প্রতিটি প্রিন্টের গুণমান নিশ্চিত করি যাতে আপনার ডিজাইনটি নিখুঁতভাবে ফুটে ওঠে।</p>
+                         </div>
+                     </div>
+                     <div class="flex items-start space-x-4">
+                         <div class="text-3xl text-cyan-400"><i class="fas fa-clock"></i></div>
+                         <div>
+                             <h3 class="text-xl font-semibold text-white">⏰ সময়মতো ডেলিভারি</h3>
+                             <p class="text-gray-400 mt-1">আমরা আপনার সময়ের মূল্য বুঝি এবং নির্ধারিত সময়ের মধ্যে কাজ সম্পন্ন করার প্রতিশ্রুতি দিই।</p>
+                         </div>
+                     </div>
+                     <div class="flex items-start space-x-4">
+                         <div class="text-3xl text-cyan-400"><i class="fas fa-handshake"></i></div>
+                         <div>
+                             <h3 class="text-xl font-semibold text-white">😊 গ্রাহক সন্তুষ্টি</h3>
+                             <p class="text-gray-400 mt-1">আপনার সন্তুষ্টিই আমাদের প্রধান লক্ষ্য। আমরা আপনার প্রয়োজন অনুযায়ী কাস্টমাইজড সমাধান প্রদান করি।</p>
+                         </div>
+                     </div>
+                      <div class="flex items-start space-x-4 md:col-span-2 md:justify-center">
+                         <div class="text-3xl text-cyan-400"><i class="fas fa-coins"></i></div>
+                         <div>
+                             <h3 class="text-xl font-semibold text-white">💰 সাশ্রয়ী মূল্য</h3>
+                             <p class="text-gray-400 mt-1">আমরা সেরা মানের পরিষেবা দিই আপনার বাজেটের মধ্যেই।</p>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+         <section id="contact" class="py-16 sm:py-24 bg-[#0f0f22]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                 <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">যোগাযোগ করুন</h2>
+                 <div class="w-24 h-1 bg-cyan-400 mx-auto mb-12"></div>
+                <div class="max-w-lg mx-auto bg-black/30 p-8 rounded-lg border border-cyan-500/30">
+                     <div class="space-y-6">
+                         <div class="flex items-center justify-center sm:justify-start space-x-4">
+                             <i class="fas fa-map-marker-alt text-2xl text-cyan-400 neon-text-cyan"></i>
+                             <p class="text-lg text-gray-200 text-left">Pankhatuli Mitrabagan Bibirgoli</p>
+                         </div>
+                         <div class="flex items-center justify-center sm:justify-start space-x-4">
+                             <i class="fas fa-phone-alt text-2xl text-cyan-400 neon-text-cyan"></i>
+                             <a href="tel:8961961886" class="text-lg text-gray-200 hover:text-cyan-400 transition-colors">8961961886</a>, 
+                             <a href="tel:9038941160" class="text-lg text-gray-200 hover:text-cyan-400 transition-colors">9038941160</a>
+                         </div>
+                          <div class="flex items-center justify-center sm:justify-start space-x-4">
+                             <i class="fas fa-envelope text-2xl text-cyan-400 neon-text-cyan"></i>
+                             <a href="mailto:meet.bin.gost@gmail.com" class="text-lg text-gray-200 hover:text-cyan-400 transition-colors">meet.bin.gost@gmail.com</a>
+                         </div>
+                          <div class="flex items-center justify-center sm:justify-start space-x-4">
+                             <i class="fab fa-whatsapp text-2xl text-cyan-400 neon-text-cyan"></i>
+                             <a href="https://wa.me/918961961886" target="_blank" class="text-lg text-gray-200 hover:text-cyan-400 transition-colors">8961961886</a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-black py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; 2025 Ma Baba Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if(!mobileMenu.classList.contains('hidden')){
+                       mobileMenu.classList.add('hidden');
+                    }
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    portfolioItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (filter === 'all' || filter === category) {
+                            item.style.transform = 'scale(1)';
+                            item.style.opacity = '1';
+                            item.style.display = 'block';
+                        } else {
+                           item.style.transform = 'scale(0.9)';
+                           item.style.opacity = '0';
+                           setTimeout(() => {
+                            item.style.display = 'none';
+                           }, 300)
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
