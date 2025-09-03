@@ -75,14 +75,25 @@
     </header>
 
     <main>
-        <section id="home" class="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('./hero-bg.png');">
+        <!-- Updated Home Section with Slider -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+            <!-- Slider Container -->
+            <div class="absolute top-0 left-0 w-full h-full">
+                <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('./card.png');"></div>
+                <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./poster.png');"></div>
+                <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./mug.png');"></div>
+                <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./tshirt.png');"></div>
+            </div>
+            <!-- Overlay -->
             <div class="absolute inset-0 bg-black opacity-60"></div>
+            <!-- Content -->
             <div class="relative z-10 px-4">
                 <h1 class="text-4xl sm:text-6xl md:text-7xl font-orbitron text-white uppercase neon-text-cyan tracking-widest">Ma-Baba Studio</h1>
                 <p class="mt-4 text-lg sm:text-2xl text-cyan-200">Inspired by Parents, Designed for You</p>
                 <p class="mt-2 text-lg sm:text-2xl text-cyan-200">মা-বাবার স্বপ্ন, আপনার হাতে ছাপা</p>
             </div>
         </section>
+
 
         <section id="about" class="py-16 sm:py-24 bg-[#0f0f22]">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -249,8 +260,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            // Mobile Menu
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             
@@ -258,6 +268,7 @@
                 mobileMenu.classList.toggle('hidden');
             });
             
+            // Smooth Scrolling
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -269,6 +280,10 @@
                     });
                 });
             });
+
+            // Portfolio Filter
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
 
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -293,6 +308,22 @@
                     });
                 });
             });
+
+            // Hero Slider
+            const slides = document.querySelectorAll('#home .slide');
+            let currentSlide = 0;
+            const slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove('opacity-100');
+                slides[currentSlide].classList.add('opacity-0');
+                
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                slides[currentSlide].classList.remove('opacity-0');
+                slides[currentSlide].classList.add('opacity-100');
+            }
+
         });
     </script>
 </body>
