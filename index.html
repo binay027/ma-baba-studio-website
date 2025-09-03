@@ -36,6 +36,12 @@
             background-color: #00ffff;
             color: #0a0a1a;
         }
+        /* New background for hero section */
+        .hero-bg {
+            background-color: #0a0a1a;
+            background-image: radial-gradient(circle at top right, rgba(0, 255, 255, 0.1), transparent 40%),
+                              radial-gradient(circle at bottom left, rgba(0, 150, 255, 0.1), transparent 50%);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -75,8 +81,8 @@
     </header>
 
     <main>
-        <!-- Updated Home Section with Slider -->
-        <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Home Section with new background -->
+        <section id="home" class="hero-bg relative min-h-screen flex items-center justify-center text-center overflow-hidden">
             <!-- Slider Container -->
             <div class="absolute top-0 left-0 w-full h-full">
                 <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('./card.png');"></div>
