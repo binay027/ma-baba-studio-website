@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
+    
+    <!-- Scroll Progress Bar -->
+    <div id="progress-bar"></div>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -33,11 +36,11 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#about" class="nav-link text-gray-300 px-3 py-2 rounded-md text-sm font-medium">পরিচয়</a>
-                        <a href="#services" class="nav-link text-gray-300 px-3 py-2 rounded-md text-sm font-medium">পরিষেবা</a>
-                        <a href="#portfolio" class="nav-link text-gray-300 px-3 py-2 rounded-md text-sm font-medium">পোর্টফোলিও</a>
-                        <a href="#why-us" class="nav-link text-gray-300 px-3 py-2 rounded-md text-sm font-medium">কেন আমরা?</a>
-                        <a href="#contact" class="nav-link text-gray-300 px-3 py-2 rounded-md text-sm font-medium">যোগাযোগ</a>
+                        <a href="#about" class="nav-link magnetic-btn text-gray-300 px-3 py-2 rounded-md text-sm font-medium">পরিচয়</a>
+                        <a href="#services" class="nav-link magnetic-btn text-gray-300 px-3 py-2 rounded-md text-sm font-medium">পরিষেবা</a>
+                        <a href="#portfolio" class="nav-link magnetic-btn text-gray-300 px-3 py-2 rounded-md text-sm font-medium">পোর্টফোলিও</a>
+                        <a href="#why-us" class="nav-link magnetic-btn text-gray-300 px-3 py-2 rounded-md text-sm font-medium">কেন আমরা?</a>
+                        <a href="#contact" class="nav-link magnetic-btn text-gray-300 px-3 py-2 rounded-md text-sm font-medium">যোগাযোগ</a>
                     </div>
                 </div>
                  <div class="md:hidden">
@@ -79,7 +82,7 @@
         </section>
 
         <section id="about" class="hidden-section py-16 sm:py-24 bg-[#0f0f22]">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">আমাদের পরিচয়</h2>
                 <div class="w-24 h-1 bg-fuchsia-500 mx-auto mb-8"></div>
                 <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-12">
@@ -138,9 +141,9 @@
                     <div class="w-24 h-1 bg-fuchsia-500 mx-auto mb-8"></div>
                 </div>
                 <div class="flex justify-center space-x-2 sm:space-x-4 mb-8">
-                    <button class="filter-btn active px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="all">All</button>
-                    <button class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="print">Print</button>
-                    <button class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="merchandise">Merchandise</button>
+                    <button class="filter-btn magnetic-btn active px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="all">All</button>
+                    <button class="filter-btn magnetic-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="print">Print</button>
+                    <button class="filter-btn magnetic-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="merchandise">Merchandise</button>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
                     <div class="portfolio-item" data-category="print">
@@ -260,6 +263,7 @@
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
     <!-- Link to your JS file -->
     <script src="script.js"></script>
 </body>
