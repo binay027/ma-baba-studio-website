@@ -58,14 +58,16 @@
 
     <main>
         <section id="home" class="hero-bg relative min-h-screen flex items-center justify-center text-center overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-full bg-black/20 backdrop-blur-sm">
+            <!-- Particle JS container -->
+            <div id="particles-js"></div>
+            <div class="absolute top-0 left-0 w-full h-full bg-black/20 backdrop-blur-sm z-10">
                 <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('./card.png');"></div>
                 <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./poster.png');"></div>
                 <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./mug.png');"></div>
                 <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./tshirt.png');"></div>
             </div>
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="relative z-10 px-4">
+            <div class="absolute inset-0 bg-black opacity-50 z-20"></div>
+            <div class="relative z-30 px-4">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-orbitron text-white uppercase neon-text-magenta tracking-widest h-24">
                     <span id="typing-text"></span><span class="typing-cursor">|</span>
                 </h1>
@@ -138,17 +140,21 @@
                     <button class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-md bg-gray-700 text-white transition-all duration-300" data-filter="merchandise">Merchandise</button>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
-                    <div class="portfolio-item group" data-category="print">
-                        <img class="rounded-lg w-full h-full object-cover cursor-pointer" src="./card.png" alt="Visiting Card">
+                    <div class="portfolio-item" data-category="print">
+                        <img class="rounded-lg w-full h-full object-cover" src="./card.png" alt="Visiting Card">
+                        <div class="portfolio-overlay"><h3>ভিজিটিং কার্ড</h3><p>দেখতে ক্লিক করুন</p></div>
                     </div>
-                    <div class="portfolio-item group" data-category="print">
-                        <img class="rounded-lg w-full h-full object-cover cursor-pointer" src="./poster.png" alt="Poster">
+                    <div class="portfolio-item" data-category="print">
+                        <img class="rounded-lg w-full h-full object-cover" src="./poster.png" alt="Poster">
+                        <div class="portfolio-overlay"><h3>পোস্টার</h3><p>দেখতে ক্লিক করুন</p></div>
                     </div>
-                    <div class="portfolio-item group" data-category="merchandise">
-                        <img class="rounded-lg w-full h-full object-cover cursor-pointer" src="./mug.png" alt="Coffee Mug">
+                    <div class="portfolio-item" data-category="merchandise">
+                        <img class="rounded-lg w-full h-full object-cover" src="./mug.png" alt="Coffee Mug">
+                        <div class="portfolio-overlay"><h3>কফি মগ</h3><p>দেখতে ক্লিক করুন</p></div>
                     </div>
-                     <div class="portfolio-item group" data-category="merchandise">
-                        <img class="rounded-lg w-full h-full object-cover cursor-pointer" src="./tshirt.png" alt="T-Shirt">
+                     <div class="portfolio-item" data-category="merchandise">
+                        <img class="rounded-lg w-full h-full object-cover" src="./tshirt.png" alt="T-Shirt">
+                        <div class="portfolio-overlay"><h3>টি-শার্ট</h3><p>দেখতে ক্লিক করুন</p></div>
                     </div>
                 </div>
             </div>
@@ -248,8 +254,9 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- Tilt JS Library -->
+    <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <!-- Link to your JS file -->
     <script src="script.js"></script>
 </body>
