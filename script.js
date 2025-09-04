@@ -1,5 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // --- NEW: Preloader ---
+    const preloader = document.getElementById('preloader');
+    window.addEventListener('load', () => {
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500); // fade out duration
+    });
     
+    // --- NEW: Custom Cursor ---
+    const cursorGlow = document.getElementById('cursor-glow');
+    document.addEventListener('mousemove', (e) => {
+        cursorGlow.style.left = e.clientX + 'px';
+        cursorGlow.style.top = e.clientY + 'px';
+    });
+
     // --- Mobile Menu ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -94,10 +110,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- NEW: Back to Top Button Logic ---
+    // --- Back to Top Button Logic ---
     const backToTopButton = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) { // Show button after scrolling 300px
+        if (window.pageYOffset > 300) { 
             backToTopButton.classList.remove('hidden');
         } else {
             backToTopButton.classList.add('hidden');
