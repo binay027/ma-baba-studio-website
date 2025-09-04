@@ -1,42 +1,70 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- NEW: Preloader ---
+    // --- Preloader ---
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
         preloader.style.opacity = '0';
         setTimeout(() => {
             preloader.style.display = 'none';
-        }, 500); // fade out duration
+        }, 500);
     });
     
-    // --- NEW: Custom Cursor (Optimized for Performance) ---
+    // --- Custom Cursor (Optimized) ---
     const cursorGlow = document.getElementById('cursor-glow');
-    
-    // Store the current mouse position
     let mouse = { x: 0, y: 0 };
-    // Store the last position of the custom cursor
     let previousMouse = { x: 0, y: 0 }
-
-    // Update mouse position on mousemove event
     document.addEventListener('mousemove', (e) => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
     });
-
-    // The main animation loop to update the cursor position
     const tick = () => {
-        // Only update the position if the mouse has moved
         if (previousMouse.x !== mouse.x || previousMouse.y !== mouse.y) {
             cursorGlow.style.left = `${mouse.x}px`;
             cursorGlow.style.top = `${mouse.y}px`;
             previousMouse.x = mouse.x;
             previousMouse.y = mouse.y;
         }
-        // Request the next frame to continue the loop
         requestAnimationFrame(tick);
     }
-    // Start the animation loop
     tick();
+
+    // --- NEW: Typing Effect ---
+    const typingTextElement = document.getElementById('typing-text');
+    if (typingTextElement) {
+        const words = ["Ma-Baba Studio", "ডিজাইন ও প্রিন্টিং", "আপনার ভাবনার প্রকাশ"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+            const typingSpeed = isDeleting ? 100 : 150;
+            setTimeout(type, typingSpeed);
+        }
+        type();
+    }
+
+    // --- NEW: Initialize Vanilla Tilt for 3D effect ---
+    VanillaTilt.init(document.querySelectorAll(".portfolio-item, .service-card"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+    });
 
 
     // --- Mobile Menu ---
