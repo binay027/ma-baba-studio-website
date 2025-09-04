@@ -85,31 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- Portfolio Filter ---
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const filter = button.getAttribute('data-filter');
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            portfolioItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                if (filter === 'all' || filter === category) {
-                    item.style.transform = 'scale(1)';
-                    item.style.opacity = '1';
-                    item.style.display = 'block';
-                } else {
-                   item.style.transform = 'scale(0.9)';
-                   item.style.opacity = '0';
-                   setTimeout(() => {
-                    item.style.display = 'none';
-                   }, 300)
-                }
-            });
-        });
-    });
-
     // --- Hero Slider ---
     const slides = document.querySelectorAll('#home .slide');
     let currentSlide = 0;
@@ -134,31 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const hiddenSections = document.querySelectorAll('.hidden-section');
     hiddenSections.forEach((section) => observer.observe(section));
-
-    // --- Portfolio Modal Logic ---
-    const modal = document.getElementById('portfolio-modal');
-    const modalImg = document.getElementById('modal-img');
-    const closeBtn = document.getElementById('modal-close-btn');
-    const portfolioGrid = document.querySelector('.portfolio-grid');
-
-    portfolioGrid.addEventListener('click', (e) => {
-        const item = e.target.closest('.portfolio-item');
-        if (item) {
-            const imgSrc = item.querySelector('img').getAttribute('src');
-            modalImg.setAttribute('src', imgSrc);
-            modal.classList.remove('hidden');
-        }
-    });
-
-    closeBtn.addEventListener('click', () => {
-        modal.classList.add('hidden');
-    });
-
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.add('hidden');
-        }
-    });
 
     // --- Back to Top Button Logic ---
     const backToTopButton = document.getElementById('back-to-top');
@@ -201,42 +151,23 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translate(0,0)';
         });
     });
-
-    // --- NEW: Testimonial Slider ---
-    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-    const dotsContainer = document.querySelector('.slider-dots');
-    let currentTestimonial = 0;
-
-    if (testimonialSlides.length > 0) {
-        // Create dots
-        testimonialSlides.forEach((_, index) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => showTestimonial(index));
-            dotsContainer.appendChild(dot);
+    
+    // --- Contact Form Submission ---
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    if(contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formStatus.textContent = 'Sending message...';
+            // This is a dummy submission. In a real website, you would send data to a server here.
+            setTimeout(() => {
+                formStatus.innerHTML = '<span class="text-green-400">Message sent successfully! Thank you.</span>';
+                contactForm.reset();
+                 setTimeout(() => {
+                    formStatus.innerHTML = '';
+                }, 5000);
+            }, 1500);
         });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function showTestimonial(index) {
-            testimonialSlides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                dots[i].classList.remove('active');
-            });
-            testimonialSlides[index].classList.add('active');
-            dots[index].classList.add('active');
-            currentTestimonial = index;
-        }
-
-        function nextTestimonial() {
-            let next = (currentTestimonial + 1) % testimonialSlides.length;
-            showTestimonial(next);
-        }
-
-        // Auto slide
-        setInterval(nextTestimonial, 7000); // Change testimonial every 7 seconds
-        showTestimonial(0); // Show the first one initially
     }
 });
 
