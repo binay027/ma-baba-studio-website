@@ -6,7 +6,6 @@ body {
 .font-orbitron {
     font-family: 'Orbitron', sans-serif;
 }
-/* New Magenta Neon Color */
 .neon-text-magenta {
     text-shadow: 0 0 5px rgba(255, 0, 255, 0.7),
                  0 0 10px rgba(255, 0, 255, 0.7),
@@ -14,7 +13,6 @@ body {
                  0 0 40px rgba(255, 0, 255, 0.5),
                  0 0 80px rgba(255, 0, 255, 0.5);
 }
-/* New Link Hover Color */
 .nav-link:hover, .nav-link.active {
     color: #ff00ff;
     text-shadow: 0 0 5px #ff00ff;
@@ -22,7 +20,6 @@ body {
 .portfolio-item {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-/* New Active Filter Button Color */
 .filter-btn.active {
     background-color: #ff00ff;
     color: #0a0a1a;
@@ -33,7 +30,6 @@ body {
     background-position: center;
 }
 
-/* Scroll Animation Styles */
 .hidden-section {
     opacity: 0;
     transform: translateY(50px);
@@ -45,8 +41,15 @@ body {
     transform: translateY(0);
 }
 
-/* Portfolio Modal Styles */
 #portfolio-modal.hidden {
     display: none;
+}
+
+/* Back to top button style */
+#back-to-top.hidden {
+    display: none;
+}
+#back-to-top {
+    display: flex;
 }
 
