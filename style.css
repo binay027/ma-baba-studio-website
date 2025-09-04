@@ -1,0 +1,52 @@
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: #0a0a1a;
+    color: #e0e0e0;
+}
+.font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+/* New Magenta Neon Color */
+.neon-text-magenta {
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.7),
+                 0 0 10px rgba(255, 0, 255, 0.7),
+                 0 0 20px rgba(255, 0, 255, 0.7),
+                 0 0 40px rgba(255, 0, 255, 0.5),
+                 0 0 80px rgba(255, 0, 255, 0.5);
+}
+/* New Link Hover Color */
+.nav-link:hover, .nav-link.active {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+}
+.portfolio-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* New Active Filter Button Color */
+.filter-btn.active {
+    background-color: #ff00ff;
+    color: #0a0a1a;
+}
+.hero-bg {
+    background-image: url('./background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Scroll Animation Styles */
+.hidden-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Portfolio Modal Styles */
+#portfolio-modal.hidden {
+    display: none;
+}
+
