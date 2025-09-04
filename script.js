@@ -9,12 +9,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500); // fade out duration
     });
     
-    // --- NEW: Custom Cursor ---
+    // --- NEW: Custom Cursor (Optimized for Performance) ---
     const cursorGlow = document.getElementById('cursor-glow');
+    
+    // Store the current mouse position
+    let mouse = { x: 0, y: 0 };
+    // Store the last position of the custom cursor
+    let previousMouse = { x: 0, y: 0 }
+
+    // Update mouse position on mousemove event
     document.addEventListener('mousemove', (e) => {
-        cursorGlow.style.left = e.clientX + 'px';
-        cursorGlow.style.top = e.clientY + 'px';
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
     });
+
+    // The main animation loop to update the cursor position
+    const tick = () => {
+        // Only update the position if the mouse has moved
+        if (previousMouse.x !== mouse.x || previousMouse.y !== mouse.y) {
+            cursorGlow.style.left = `${mouse.x}px`;
+            cursorGlow.style.top = `${mouse.y}px`;
+            previousMouse.x = mouse.x;
+            previousMouse.y = mouse.y;
+        }
+        // Request the next frame to continue the loop
+        requestAnimationFrame(tick);
+    }
+    // Start the animation loop
+    tick();
+
 
     // --- Mobile Menu ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
