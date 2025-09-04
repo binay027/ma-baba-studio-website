@@ -18,8 +18,9 @@ body {
     color: #ff00ff;
     text-shadow: 0 0 5px #ff00ff;
 }
-.portfolio-item {
+.portfolio-item, .service-card {
     transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-style: preserve-3d;
 }
 .filter-btn.active {
     background-color: #ff00ff;
@@ -95,11 +96,18 @@ body {
     transition: width 0.2s, height 0.2s, background-color 0.2s;
     z-index: 10000;
 }
-
-/* Cursor hover effect */
-a:hover ~ #cursor-glow, button:hover ~ #cursor-glow {
+a:hover ~ #cursor-glow, button:hover ~ #cursor-glow, .portfolio-item:hover ~ #cursor-glow {
     width: 40px;
     height: 40px;
     background-color: rgba(255, 0, 255, 0.2);
+}
+
+/* Typing Cursor Animation */
+.typing-cursor {
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
