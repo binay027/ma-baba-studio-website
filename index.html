@@ -9,20 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
     
-    <!-- Scroll Progress Bar -->
     <div id="progress-bar"></div>
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
-    
-    <!-- Custom Cursor -->
+    <div id="preloader"><div class="loader"></div></div>
     <div id="cursor-glow"></div>
 
     <header id="header" class="bg-black/50 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
@@ -43,9 +35,7 @@
                     </div>
                 </div>
                  <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white p-2">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                    <button id="mobile-menu-button" class="text-white p-2"><i class="fas fa-bars"></i></button>
                 </div>
             </div>
              <div id="mobile-menu" class="hidden md:hidden">
@@ -59,18 +49,14 @@
 
     <main>
         <section id="home" class="hero-bg relative min-h-screen flex items-center justify-center text-center overflow-hidden">
-            <!-- Particle JS container -->
             <div id="particles-js"></div>
-            <!-- Slider Container -->
             <div class="absolute top-0 left-0 w-full h-full bg-black/20 backdrop-blur-sm z-10">
                 <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('./card.png');"></div>
                 <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./poster.png');"></div>
                 <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./mug.png');"></div>
                 <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./tshirt.png');"></div>
             </div>
-            <!-- Overlay -->
             <div class="absolute inset-0 bg-black opacity-50 z-20"></div>
-            <!-- Content -->
             <div class="relative z-30 px-4">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-orbitron text-white uppercase neon-text-magenta tracking-widest h-24">
                     <span id="typing-text"></span><span class="typing-cursor">|</span>
@@ -83,9 +69,7 @@
              <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">আমাদের পরিচয়</h2>
                 <div class="w-24 h-1 bg-fuchsia-500 mx-auto mb-8"></div>
-                <p class="max-w-3xl mx-auto text-lg text-gray-300">
-                    "Ma Baba Studio"-তে আপনাকে স্বাগত জানাই! আমাদের পথচলা শুরু হয়েছে একটি সহজ ভাবনা থেকে - বাবা-মায়ের স্নেহ এবং ভালোবাসার মতো যত্ন দিয়ে প্রতিটি ডিজাইন তৈরি করা। আমরা শুধু একটি ডিজাইন স্টডিও নই; আমরা আপনার ভাবনা, আবেগ এবং ব্যবসাকে বাস্তবে রূপ দিই।
-                </p>
+                <p class="max-w-3xl mx-auto text-lg text-gray-300">"Ma Baba Studio"-তে আপনাকে স্বাগত জানাই! আমাদের পথচলা শুরু হয়েছে একটি সহজ ভাবনা থেকে - বাবা-মায়ের স্নেহ এবং ভালোবাসার মতো যত্ন দিয়ে প্রতিটি ডিজাইন তৈরি করা। আমরা শুধু একটি ডিজাইন স্টডিও নই; আমরা আপনার ভাবনা, আবেগ এবং ব্যবসাকে বাস্তবে রূপ দিই।</p>
             </div>
         </section>
 
@@ -94,22 +78,10 @@
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">আমাদের পরিষেবা</h2>
                 <div class="w-24 h-1 bg-fuchsia-500 mx-auto mb-12"></div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="service-card bg-[#0a0a1a] p-8 rounded-lg border border-gray-700/50 transform transition-all duration-300">
-                        <div class="text-4xl text-fuchsia-400 mb-4"><i class="fas fa-id-card"></i></div>
-                        <h3 class="text-xl font-semibold text-white">ডিজাইন ও প্রিন্টিং</h3>
-                    </div>
-                    <div class="service-card bg-[#0a0a1a] p-8 rounded-lg border border-gray-700/50 transform transition-all duration-300">
-                        <div class="text-4xl text-fuchsia-400 mb-4"><i class="fas fa-tshirt"></i></div>
-                        <h3 class="text-xl font-semibold text-white">অ্যাপারেল প্রিন্টিং</h3>
-                    </div>
-                    <div class="service-card bg-[#0a0a1a] p-8 rounded-lg border border-gray-700/50 transform transition-all duration-300">
-                        <div class="text-4xl text-fuchsia-400 mb-4"><i class="fas fa-mug-hot"></i></div>
-                        <h3 class="text-xl font-semibold text-white">মার্চেন্ডাইজ প্রিন্টিং</h3>
-                    </div>
-                    <div class="service-card bg-[#0a0a1a] p-8 rounded-lg border border-gray-700/50 transform transition-all duration-300">
-                        <div class="text-4xl text-fuchsia-400 mb-4"><i class="fas fa-gift"></i></div>
-                        <h3 class="text-xl font-semibold text-white">কাস্টমাইজড গিফট</h3>
-                    </div>
+                    <div class="service-card bg-[#0a0a1a] p-8 rounded-lg border border-gray-700/50 transform transition-all duration-300"><div class="text-4xl text-fuchsia-400 mb-4"><i class="fas fa-id-card"></i></div><h3 class="text-xl font-semibold text-white">ডিজাইন ও প্রিন্টিং</h3></div>
+                    <div class="service-card bg-[#0a0a1a] p-8 rounded-lg border border-gray-700/50 transform transition-all duration-300"><div class="text-4xl text-fuchsia-400 mb-4"><i class="fas fa-tshirt"></i></div><h3 class="text-xl font-semibold text-white">অ্যাপারেল প্রিন্টিং</h3></div>
+                    <div class="service-card bg-[#0a0a1a] p-8 rounded-lg border border-gray-700/50 transform transition-all duration-300"><div class="text-4xl text-fuchsia-400 mb-4"><i class="fas fa-mug-hot"></i></div><h3 class="text-xl font-semibold text-white">মার্চেন্ডাইজ প্রিন্টিং</h3></div>
+                    <div class="service-card bg-[#0a0a1a] p-8 rounded-lg border border-gray-700/50 transform transition-all duration-300"><div class="text-4xl text-fuchsia-400 mb-4"><i class="fas fa-gift"></i></div><h3 class="text-xl font-semibold text-white">কাস্টমাইজড গিফট</h3></div>
                 </div>
             </div>
         </section>
@@ -120,220 +92,78 @@
                     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Our Work Gallery</h2>
                     <p class="max-w-2xl mx-auto text-gray-400 mb-8">Explore our portfolio of creative designs and successful projects that showcase our commitment to quality and innovation.</p>
                 </div>
+                <div class="flex justify-center flex-wrap gap-2 sm:gap-4 mb-8">
+                    <button class="filter-btn magnetic-btn active" data-filter="all">All</button>
+                    <button class="filter-btn magnetic-btn" data-filter="visiting-card">Visiting Cards</button>
+                    <button class="filter-btn magnetic-btn" data-filter="apparel">Apparel</button>
+                    <button class="filter-btn magnetic-btn" data-filter="poster">Posters</button>
+                    <button class="filter-btn magnetic-btn" data-filter="banner">Banners</button>
+                </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
-                    <div class="portfolio-item">
-                        <img class="rounded-t-lg w-full h-auto object-cover" src="./card.png" alt="Business Card Design">
-                        <div class="p-4 bg-[#0f0f22] rounded-b-lg">
-                           <h3 class="text-xl font-semibold text-white">Business Card Design</h3>
-                           <p class="text-gray-400 mt-2">Professional business card with neon-style branding.</p>
-                        </div>
-                    </div>
-                     <div class="portfolio-item">
-                        <img class="rounded-t-lg w-full h-auto object-cover" src="./tshirt.png" alt="T-Shirt Design">
-                        <div class="p-4 bg-[#0f0f22] rounded-b-lg">
-                           <h3 class="text-xl font-semibold text-white">Ma Baba Studio T-Shirt</h3>
-                           <p class="text-gray-400 mt-2">Custom branded t-shirt with studio logo design.</p>
-                        </div>
-                    </div>
-                     <div class="portfolio-item">
-                        <img class="rounded-t-lg w-full h-auto object-cover" src="./mug.png" alt="Custom Coffee Mug">
-                        <div class="p-4 bg-[#0f0f22] rounded-b-lg">
-                           <h3 class="text-xl font-semibold text-white">Custom Coffee Mug</h3>
-                           <p class="text-gray-400 mt-2">Personalized mug with Ma Baba Studio branding.</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img class="rounded-t-lg w-full h-auto object-cover" src="./poster.png" alt="Event Poster Design">
-                        <div class="p-4 bg-[#0f0f22] rounded-b-lg">
-                           <h3 class="text-xl font-semibold text-white">Event Poster Design</h3>
-                           <p class="text-gray-400 mt-2">Professional poster design for events and promotions.</p>
-                        </div>
-                    </div>
-                     <div class="portfolio-item">
-                        <img class="rounded-t-lg w-full h-auto object-cover" src="https://placehold.co/600x400/1a1a2e/f0f0f0?text=Neon+Banner" alt="Neon Banner Design">
-                        <div class="p-4 bg-[#0f0f22] rounded-b-lg">
-                           <h3 class="text-xl font-semibold text-white">Neon Banner Design</h3>
-                           <p class="text-gray-400 mt-2">Eye-catching neon style banner for promotional use.</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img class="rounded-t-lg w-full h-auto object-cover" src="https://placehold.co/600x400/1a1a2e/f0f0f0?text=Service+Banner" alt="Service Banner">
-                        <div class="p-4 bg-[#0f0f22] rounded-b-lg">
-                           <h3 class="text-xl font-semibold text-white">Service Banner</h3>
-                           <p class="text-gray-400 mt-2">Professional service listing banner design.</p>
-                        </div>
-                    </div>
+                    <div class="portfolio-item" data-category="visiting-card"><img class="rounded-t-lg w-full h-auto object-cover" src="./card.png" alt="Business Card Design"><div class="p-4 bg-[#0f0f22] rounded-b-lg"><h3 class="text-xl font-semibold text-white">Business Card Design</h3><p class="text-gray-400 mt-2">Professional business card with neon-style branding.</p></div></div>
+                    <div class="portfolio-item" data-category="apparel"><img class="rounded-t-lg w-full h-auto object-cover" src="./tshirt.png" alt="T-Shirt Design"><div class="p-4 bg-[#0f0f22] rounded-b-lg"><h3 class="text-xl font-semibold text-white">Ma Baba Studio T-Shirt</h3><p class="text-gray-400 mt-2">Custom branded t-shirt with studio logo design.</p></div></div>
+                    <div class="portfolio-item" data-category="apparel"><img class="rounded-t-lg w-full h-auto object-cover" src="./mug.png" alt="Custom Coffee Mug"><div class="p-4 bg-[#0f0f22] rounded-b-lg"><h3 class="text-xl font-semibold text-white">Custom Coffee Mug</h3><p class="text-gray-400 mt-2">Personalized mug with Ma Baba Studio branding.</p></div></div>
+                    <div class="portfolio-item" data-category="poster"><img class="rounded-t-lg w-full h-auto object-cover" src="./poster.png" alt="Event Poster Design"><div class="p-4 bg-[#0f0f22] rounded-b-lg"><h3 class="text-xl font-semibold text-white">Event Poster Design</h3><p class="text-gray-400 mt-2">Professional poster design for events and promotions.</p></div></div>
+                    <div class="portfolio-item" data-category="banner"><img class="rounded-t-lg w-full h-auto object-cover" src="./neon-banner.png" alt="Neon Banner Design"><div class="p-4 bg-[#0f0f22] rounded-b-lg"><h3 class="text-xl font-semibold text-white">Neon Banner Design</h3><p class="text-gray-400 mt-2">Eye-catching neon style banner for promotional use.</p></div></div>
+                    <div class="portfolio-item" data-category="banner"><img class="rounded-t-lg w-full h-auto object-cover" src="./service-banner.png" alt="Service Banner"><div class="p-4 bg-[#0f0f22] rounded-b-lg"><h3 class="text-xl font-semibold text-white">Service Banner</h3><p class="text-gray-400 mt-2">Professional service listing banner design.</p></div></div>
                 </div>
             </div>
         </section>
         
-        <section class="coming-soon-section hidden-section py-16 sm:py-24 bg-[#0f0f22]">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div class="icon-container text-5xl text-fuchsia-400 mb-6">
-                    <i class="fas fa-arrow-up"></i>
-                </div>
-                <h2 class="text-3xl font-bold text-white">আরও কাজ আসছে শীঘ্রই</h2>
-                <p class="max-w-2xl mx-auto text-gray-400 mt-4 mb-8">আমরা আমাদের গ্যালারি আপডেট করছি সর্বশেষ কাজের সাথে। নতুন ডিজাইন এবং প্রোজেক্ট দেখতে শীঘ্রই ফিরে আসুন।</p>
-                <a href="#contact" class="cta-button">পোর্টফোলিওর দেখতে যোগাযোগ করুন</a>
-            </div>
-        </section>
+        <section class="coming-soon-section hidden-section py-16 sm:py-24 bg-[#0f0f22]"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><div class="icon-container text-5xl text-fuchsia-400 mb-6"><i class="fas fa-arrow-up"></i></div><h2 class="text-3xl font-bold text-white">আরও কাজ আসছে শীঘ্রই</h2><p class="max-w-2xl mx-auto text-gray-400 mt-4 mb-8">আমরা আমাদের গ্যালারি আপডেট করছি সর্বশেষ কাজের সাথে। নতুন ডিজাইন এবং প্রোজেক্ট দেখতে শীঘ্রই ফিরে আসুন।</p><a href="#contact" class="cta-button">পোর্টফোলিওর দেখতে যোগাযোগ করুন</a></div></section>
 
         <section id="contact" class="hidden-section py-16 sm:py-24 bg-[#0a0a1a]">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Contact Us</h2>
-                    <p class="max-w-2xl mx-auto text-gray-400 mt-4">Ready to bring your ideas to life? Get in touch with us today for a consultation or to discuss your project requirements.</p>
-                </div>
+                <div class="text-center"><h2 class="text-3xl sm:text-4xl font-bold text-white">Contact Us</h2><p class="max-w-2xl mx-auto text-gray-400 mt-4">Ready to bring your ideas to life? Get in touch with us today for a consultation or to discuss your project requirements.</p></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-                    <!-- Get in Touch -->
                     <div class="space-y-8">
                         <h3 class="text-2xl font-semibold text-white">Get In Touch</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="contact-card">
-                                <i class="fas fa-phone-alt"></i>
-                                <h4 class="font-semibold">Phone Numbers</h4>
-                                <p>8961961886</p>
-                                <p>9038941160</p>
-                            </div>
-                            <div class="contact-card">
-                                <i class="fas fa-envelope"></i>
-                                <h4 class="font-semibold">Email</h4>
-                                <p>meet.bin.gost@gmail.com</p>
-                            </div>
-                             <div class="contact-card">
-                                <i class="fab fa-whatsapp"></i>
-                                <h4 class="font-semibold">WhatsApp</h4>
-                                <p>8961961886</p>
-                            </div>
-                             <div class="contact-card">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <h4 class="font-semibold">Address</h4>
-                                <p>Pankhatuli Mitrabagan Bibirgoli</p>
-                            </div>
+                            <div class="contact-card"><i class="fas fa-phone-alt"></i><h4 class="font-semibold">Phone Numbers</h4><p>8961961886, 9038941160</p><a href="tel:8961961886" class="contact-link">Call Now</a></div>
+                            <div class="contact-card"><i class="fas fa-envelope"></i><h4 class="font-semibold">Email</h4><p>meet.bin.gost@gmail.com</p><a href="mailto:meet.bin.gost@gmail.com" class="contact-link">Send Email</a></div>
+                            <div class="contact-card"><i class="fab fa-whatsapp"></i><h4 class="font-semibold">WhatsApp</h4><p>8961961886</p><a href="https://wa.me/918961961886" target="_blank" class="contact-link">Chat Now</a></div>
+                            <div class="contact-card"><i class="fas fa-map-marker-alt"></i><h4 class="font-semibold">Address</h4><p>Pankhatuli Mitrabagan Bibirgoli</p><a href="https://www.google.com/maps/search/?api=1&query=Pankhatuli+Mitrabagan+Bibirgoli" target="_blank" class="contact-link">View Map</a></div>
                         </div>
-                         <div class="contact-card business-hours">
-                             <i class="fas fa-clock"></i>
-                             <h4 class="font-semibold mb-4">Business Hours</h4>
-                             <div class="flex justify-between border-b border-gray-700 py-2"><p>Monday - Friday</p> <p>9:00 AM - 8:00 PM</p></div>
-                             <div class="flex justify-between border-b border-gray-700 py-2"><p>Saturday</p> <p>9:00 AM - 6:00 PM</p></div>
-                             <div class="flex justify-between py-2"><p>Sunday</p> <p>10:00 AM - 4:00 PM</p></div>
-                         </div>
+                        <div class="contact-card business-hours"><i class="fas fa-clock"></i><h4 class="font-semibold mb-4">Business Hours</h4><div class="flex justify-between border-b border-gray-700 py-2"><p>Monday - Friday</p><p>9:00 AM - 8:00 PM</p></div><div class="flex justify-between border-b border-gray-700 py-2"><p>Saturday</p><p>9:00 AM - 6:00 PM</p></div><div class="flex justify-between py-2"><p>Sunday</p><p>10:00 AM - 4:00 PM</p></div></div>
                     </div>
-                    <!-- Send a Message -->
                     <div class="p-8 bg-[#0f0f22] rounded-lg border border-gray-700/50">
                         <h3 class="text-2xl font-semibold text-white mb-6">Send us a Message</h3>
                         <form id="contact-form" class="space-y-6">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="first-name" class="form-label">First Name *</label>
-                                    <input type="text" id="first-name" name="first-name" required class="form-input">
-                                </div>
-                                 <div>
-                                    <label for="last-name" class="form-label">Last Name *</label>
-                                    <input type="text" id="last-name" name="last-name" required class="form-input">
-                                </div>
+                                <div><label for="first-name" class="form-label">First Name *</label><input type="text" id="first-name" name="first-name" required class="form-input"></div>
+                                <div><label for="last-name" class="form-label">Last Name *</label><input type="text" id="last-name" name="last-name" required class="form-input"></div>
                             </div>
-                            <div>
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" id="email" name="email" required class="form-input">
-                            </div>
-                            <div>
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-input">
-                            </div>
-                             <div>
-                                <label for="service" class="form-label">Service Needed</label>
-                                <input type="text" id="service" name="service" placeholder="e.g., Business Cards, Poster Design, etc." class="form-input">
-                            </div>
-                            <div>
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea id="message" name="message" rows="4" required class="form-input"></textarea>
-                            </div>
-                            <div>
-                                <button type="submit" class="cta-button w-full">Send Message</button>
-                            </div>
-                             <div id="form-status" class="text-center"></div>
+                            <div><label for="email" class="form-label">Email *</label><input type="email" id="email" name="email" required class="form-input"></div>
+                            <div><label for="phone" class="form-label">Phone Number</label><input type="tel" id="phone" name="phone" class="form-input"></div>
+                            <div><label for="service" class="form-label">Service Needed</label><input type="text" id="service" name="service" placeholder="e.g., Business Cards, Poster Design, etc." class="form-input"></div>
+                            <div><label for="message" class="form-label">Message *</label><textarea id="message" name="message" rows="4" required class="form-input"></textarea></div>
+                            <div><button type="submit" class="cta-button w-full">Send Message</button></div>
+                            <div id="form-status" class="text-center"></div>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="find-us" class="hidden-section py-16 sm:py-24 bg-[#0f0f22]">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                 <div class="p-8 bg-[#0a0a1a] rounded-lg border border-gray-700/50">
-                     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Find Us</h2>
-                     <i class="fas fa-map-marker-alt text-5xl text-fuchsia-400 my-6"></i>
-                     <p class="text-xl text-gray-300">Pankhatuli Mitrabagan Bibirgoli</p>
-                     <a href="https://www.google.com/maps/search/?api=1&query=Pankhatuli+Mitrabagan+Bibirgoli" target="_blank" class="cta-button-outline mt-6">Open in Google Maps</a>
-                 </div>
-            </div>
-        </section>
-
+        <section id="find-us" class="hidden-section py-16 sm:py-24 bg-[#0f0f22]"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><div class="p-8 bg-[#0a0a1a] rounded-lg border border-gray-700/50"><h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Find Us</h2><i class="fas fa-map-marker-alt text-5xl text-fuchsia-400 my-6"></i><p class="text-xl text-gray-300">Pankhatuli Mitrabagan Bibirgoli</p><a href="https://www.google.com/maps/search/?api=1&query=Pankhatuli+Mitrabagan+Bibirgoli" target="_blank" class="cta-button-outline mt-6">Open in Google Maps</a></div></div></section>
     </main>
     
     <footer class="main-footer pt-16 pb-8 bg-black">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Column 1: Studio Info -->
-                <div class="col-span-1">
-                     <a href="#home" class="flex items-center space-x-3 text-xl font-bold font-orbitron text-white">
-                        <img src="./logo.png" alt="Ma Baba Studio Logo" class="h-10 w-10 rounded-full">
-                        <span>MA-BABA STUDIO</span>
-                     </a>
-                     <p class="text-gray-400 mt-4">Inspired by parents, designed for you. Professional design and printing services that bring your creative visions to life.</p>
-                     <p class="text-fuchsia-400 mt-2">মা-বাবার স্বপ্ন, আপনার হাতে ছাপা</p>
-                </div>
-                <!-- Column 2: Quick Links -->
-                <div class="col-span-1">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="space-y-3 mt-4">
-                        <li><a href="#home" class="footer-link">Home</a></li>
-                        <li><a href="#about" class="footer-link">About Us</a></li>
-                        <li><a href="#services" class="footer-link">Services</a></li>
-                        <li><a href="#portfolio" class="footer-link">Gallery</a></li>
-                        <li><a href="#contact" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- Column 3: Our Services -->
-                <div class="col-span-1">
-                    <h4 class="footer-heading">Our Services</h4>
-                    <ul class="space-y-3 mt-4">
-                        <li class="footer-link-static">Visiting Card Design & Print</li>
-                        <li class="footer-link-static">Poster Design & Print</li>
-                        <li class="footer-link-static">Banner & Flex Design</li>
-                        <li class="footer-link-static">Coffee Mug Printing</li>
-                        <li class="footer-link-static">T-Shirt Printing</li>
-                        <li class="footer-link-static">Custom Design Solutions</li>
-                    </ul>
-                </div>
-                <!-- Column 4: Contact Info -->
-                <div class="col-span-1">
-                    <h4 class="footer-heading">Contact Info</h4>
-                    <ul class="space-y-4 mt-4 text-gray-400">
-                        <li class="flex items-start"><i class="fas fa-phone-alt mt-1 mr-3 text-fuchsia-400"></i><span>8961961886, 9038941160</span></li>
-                        <li class="flex items-start"><i class="fas fa-envelope mt-1 mr-3 text-fuchsia-400"></i><span>meet.bin.gost@gmail.com</span></li>
-                        <li class="flex items-start"><i class="fab fa-whatsapp mt-1 mr-3 text-fuchsia-400"></i><span>8961961886</span></li>
-                         <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-fuchsia-400"></i><span>Pankhatuli Mitrabagan Bibirgoli</span></li>
-                    </ul>
-                </div>
+                <div class="col-span-1"><a href="#home" class="flex items-center space-x-3 text-xl font-bold font-orbitron text-white"><img src="./logo.png" alt="Ma Baba Studio Logo" class="h-10 w-10 rounded-full"><span>MA-BABA STUDIO</span></a><p class="text-gray-400 mt-4">Inspired by parents, designed for you. Professional design and printing services that bring your creative visions to life.</p><p class="text-fuchsia-400 mt-2">মা-বাবার স্বপ্ন, আপনার হাতে ছাপা</p></div>
+                <div class="col-span-1"><h4 class="footer-heading">Quick Links</h4><ul class="space-y-3 mt-4"><li><a href="#home" class="footer-link">Home</a></li><li><a href="#about" class="footer-link">About Us</a></li><li><a href="#services" class="footer-link">Services</a></li><li><a href="#portfolio" class="footer-link">Gallery</a></li><li><a href="#contact" class="footer-link">Contact</a></li></ul></div>
+                <div class="col-span-1"><h4 class="footer-heading">Our Services</h4><ul class="space-y-3 mt-4"><li class="footer-link-static">Visiting Card Design & Print</li><li class="footer-link-static">Poster Design & Print</li><li class="footer-link-static">Banner & Flex Design</li><li class="footer-link-static">Coffee Mug Printing</li><li class="footer-link-static">T-Shirt Printing</li><li class="footer-link-static">Custom Design Solutions</li></ul></div>
+                <div class="col-span-1"><h4 class="footer-heading">Contact Info</h4><ul class="space-y-4 mt-4 text-gray-400"><li class="flex items-start"><i class="fas fa-phone-alt mt-1 mr-3 text-fuchsia-400"></i><span>8961961886, 9038941160</span></li><li class="flex items-start"><i class="fas fa-envelope mt-1 mr-3 text-fuchsia-400"></i><span>meet.bin.gost@gmail.com</span></li><li class="flex items-start"><i class="fab fa-whatsapp mt-1 mr-3 text-fuchsia-400"></i><span>8961961886</span></li><li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-fuchsia-400"></i><span>Pankhatuli Mitrabagan Bibirgoli</span></li></ul></div>
             </div>
-            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-gray-500">
-                 <p>&copy; 2025 Ma Baba Studio. All Rights Reserved.</p>
-                 <p class="mt-4 sm:mt-0">Made with ❤️ for our community</p>
-            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-gray-500"><p>&copy; 2025 Ma Baba Studio. All Rights Reserved.</p><p class="mt-4 sm:mt-0">Made with ❤️ for our community</p></div>
         </div>
     </footer>
     
-    <!-- Back to Top Button -->
-    <a href="#home" id="back-to-top" class="hidden fixed bottom-8 right-8 bg-fuchsia-500 text-white w-12 h-12 rounded-full items-center justify-center text-xl shadow-lg hover:bg-fuchsia-600 transition-all duration-300 z-50">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <a href="#home" id="back-to-top" class="hidden fixed bottom-8 right-8 bg-fuchsia-500 text-white w-12 h-12 rounded-full items-center justify-center text-xl shadow-lg hover:bg-fuchsia-600 transition-all duration-300 z-50"><i class="fas fa-arrow-up"></i></a>
 
-    <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <!-- Link to your JS file -->
     <script src="script.js"></script>
 </body>
 </html>
