@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // --- NEW: Scroll Progress Bar ---
+    // --- Scroll Progress Bar ---
     const progressBar = document.getElementById('progress-bar');
     window.addEventListener('scroll', () => {
         const scrollTop = document.documentElement.scrollTop;
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.style.width = scrollProgress + '%';
     });
 
-    // --- NEW: Magnetic Buttons ---
+    // --- Magnetic Buttons ---
     const magneticButtons = document.querySelectorAll('.magnetic-btn');
     magneticButtons.forEach(btn => {
         btn.addEventListener('mousemove', function(e) {
@@ -202,23 +202,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- NEW: Sound Effects on Hover ---
-    const synth = new Tone.Synth({
-        oscillator: { type: 'sine' },
-        envelope: { attack: 0.005, decay: 0.1, sustain: 0.3, release: 0.1 }
-    }).toDestination();
-    
-    const playSound = () => {
-        if (Tone.context.state !== 'running') {
-            Tone.start();
+    // --- NEW: Testimonial Slider ---
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    const dotsContainer = document.querySelector('.slider-dots');
+    let currentTestimonial = 0;
+
+    if (testimonialSlides.length > 0) {
+        // Create dots
+        testimonialSlides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => showTestimonial(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function showTestimonial(index) {
+            testimonialSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                dots[i].classList.remove('active');
+            });
+            testimonialSlides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentTestimonial = index;
         }
-        synth.triggerAttackRelease("C5", "8n");
-    };
 
-    const interactiveElements = document.querySelectorAll('a, button, .portfolio-item');
-    interactiveElements.forEach(elem => {
-        elem.addEventListener('mouseenter', playSound);
-    });
+        function nextTestimonial() {
+            let next = (currentTestimonial + 1) % testimonialSlides.length;
+            showTestimonial(next);
+        }
 
+        // Auto slide
+        setInterval(nextTestimonial, 7000); // Change testimonial every 7 seconds
+        showTestimonial(0); // Show the first one initially
+    }
 });
 
