@@ -27,6 +27,8 @@ body {
 .portfolio-item:hover img { transform: scale(1.05); }
 .portfolio-tag { display: inline-block; padding: 2px 10px; background-color: #e0f2fe; color: #0369a1; border-radius: 999px; font-weight: 500; font-size: 0.75rem; margin-bottom: 0.75rem; }
 .portfolio-title { font-size: 1.25rem; font-weight: 600; }
+.filter-btn { padding: 8px 16px; border-radius: 999px; background-color: #f3f4f6; color: #4b5563; font-weight: 500; transition: all 0.3s; border: 1px solid #e5e7eb;}
+.filter-btn.active { background: linear-gradient(to right, #38bdf8, #0ea5e9); color: white; border-color: transparent; }
 .contact-card-new { background-color: #f8fafc; padding: 24px; border-radius: 12px; border: 1px solid #e5e7eb; text-align: center; }
 .contact-card-new i { font-size: 1.75rem; color: #0ea5e9; margin-bottom: 1rem; }
 .contact-card-new h4 { font-weight: 600; margin-bottom: 0.25rem; }
@@ -65,6 +67,4 @@ a:hover ~ #cursor-glow, button:hover ~ #cursor-glow { width: 50px; height: 50px;
 .cta-button-outline:hover { background-color: #0ea5e9; color: white; }
 .home-title-shadow { text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
 .text-shadow { text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
-.filter-btn { padding: 8px 16px; border-radius: 999px; background-color: #f3f4f6; color: #4b5563; font-weight: 500; transition: all 0.3s; border: 1px solid #e5e7eb;}
-.filter-btn.active { background: linear-gradient(to right, #38bdf8, #0ea5e9); color: white; border-color: transparent; }
 
