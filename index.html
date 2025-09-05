@@ -54,13 +54,7 @@
     <main>
         <section id="home" class="home-bg relative min-h-screen flex items-center justify-center text-center overflow-hidden">
              <div id="particles-js"></div>
-             <div class="absolute top-0 left-0 w-full h-full bg-white/20 backdrop-blur-sm z-10">
-                <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('./card.png');"></div>
-                <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./poster.png');"></div>
-                <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./mug.png');"></div>
-                <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./tshirt.png');"></div>
-            </div>
-            <div class="absolute inset-0 bg-black opacity-30 z-20"></div>
+             <div class="absolute inset-0 bg-black opacity-40 z-20"></div>
              <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
                 <div class="max-w-3xl mx-auto">
                     <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight home-title-shadow">
@@ -101,13 +95,20 @@
                     <h2 class="section-title">আমাদের কাজের গ্যালারি</h2>
                     <p class="section-subtitle">আমাদের সৃজনশীল ডিজাইন এবং সফল প্রোজেক্টের কিছু উদাহরণ।</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                    <div class="portfolio-item tilt-element"><div class="portfolio-image-container"><img src="./card.png" alt="Business Card"></div><div class="p-5"><span class="portfolio-tag">Visiting Card</span><h3 class="portfolio-title">Business Card Design</h3></div></div>
-                    <div class="portfolio-item tilt-element"><div class="portfolio-image-container"><img src="./tshirt.png" alt="T-Shirt"></div><div class="p-5"><span class="portfolio-tag">Apparel</span><h3 class="portfolio-title">Ma Baba Studio T-Shirt</h3></div></div>
-                    <div class="portfolio-item tilt-element"><div class="portfolio-image-container"><img src="./mug.png" alt="Coffee Mug"></div><div class="p-5"><span class="portfolio-tag">Apparel</span><h3 class="portfolio-title">Custom Coffee Mug</h3></div></div>
-                    <div class="portfolio-item tilt-element"><div class="portfolio-image-container"><img src="./poster.png" alt="Poster"></div><div class="p-5"><span class="portfolio-tag">Poster</span><h3 class="portfolio-title">Event Poster Design</h3></div></div>
-                    <div class="portfolio-item tilt-element"><div class="portfolio-image-container"><img src="./neon-banner.png" alt="Neon Banner"></div><div class="p-5"><span class="portfolio-tag">Banner</span><h3 class="portfolio-title">Neon Banner Design</h3></div></div>
-                    <div class="portfolio-item tilt-element"><div class="portfolio-image-container"><img src="./service-banner.png" alt="Service Banner"></div><div class="p-5"><span class="portfolio-tag">Banner</span><h3 class="portfolio-title">Service Banner</h3></div></div>
+                <div class="flex justify-center flex-wrap gap-2 sm:gap-4 my-8">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="visiting-card">Visiting Cards</button>
+                    <button class="filter-btn" data-filter="apparel">Apparel</button>
+                    <button class="filter-btn" data-filter="poster">Posters</button>
+                    <button class="filter-btn" data-filter="banner">Banners</button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
+                    <div class="portfolio-item tilt-element" data-category="visiting-card"><div class="portfolio-image-container"><img src="./card.png" alt="Business Card"></div><div class="p-5"><span class="portfolio-tag">Visiting Card</span><h3 class="portfolio-title">Business Card Design</h3></div></div>
+                    <div class="portfolio-item tilt-element" data-category="apparel"><div class="portfolio-image-container"><img src="./tshirt.png" alt="T-Shirt"></div><div class="p-5"><span class="portfolio-tag">Apparel</span><h3 class="portfolio-title">Ma Baba Studio T-Shirt</h3></div></div>
+                    <div class="portfolio-item tilt-element" data-category="apparel"><div class="portfolio-image-container"><img src="./mug.png" alt="Coffee Mug"></div><div class="p-5"><span class="portfolio-tag">Apparel</span><h3 class="portfolio-title">Custom Coffee Mug</h3></div></div>
+                    <div class="portfolio-item tilt-element" data-category="poster"><div class="portfolio-image-container"><img src="./poster.png" alt="Poster"></div><div class="p-5"><span class="portfolio-tag">Poster</span><h3 class="portfolio-title">Event Poster Design</h3></div></div>
+                    <div class="portfolio-item tilt-element" data-category="banner"><div class="portfolio-image-container"><img src="./neon-banner.png" alt="Neon Banner"></div><div class="p-5"><span class="portfolio-tag">Banner</span><h3 class="portfolio-title">Neon Banner Design</h3></div></div>
+                    <div class="portfolio-item tilt-element" data-category="banner"><div class="portfolio-image-container"><img src="./service-banner.png" alt="Service Banner"></div><div class="p-5"><span class="portfolio-tag">Banner</span><h3 class="portfolio-title">Service Banner</h3></div></div>
                 </div>
             </div>
         </section>
