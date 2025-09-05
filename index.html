@@ -54,12 +54,19 @@
     <main>
         <section id="home" class="home-bg relative min-h-screen flex items-center justify-center text-center overflow-hidden">
              <div id="particles-js"></div>
-             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+             <div class="absolute top-0 left-0 w-full h-full bg-white/20 backdrop-blur-sm z-10">
+                <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('./card.png');"></div>
+                <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./poster.png');"></div>
+                <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./mug.png');"></div>
+                <div class="slide absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('./tshirt.png');"></div>
+            </div>
+            <div class="absolute inset-0 bg-black opacity-30 z-20"></div>
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
                 <div class="max-w-3xl mx-auto">
-                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight home-title-shadow">
                          <span id="typing-text"></span><span class="typing-cursor">|</span>
                     </h1>
-                    <p class="mt-6 text-xl text-gray-600">আপনার ব্র্যান্ড এবং ব্যক্তিগত প্রয়োজনের জন্য সেরা মানের ডিজাইন এবং প্রিন্টিং পরিষেবা।</p>
+                    <p class="mt-6 text-xl text-gray-100 font-semibold text-shadow">আপনার ব্র্যান্ড এবং ব্যক্তিগত প্রয়োজনের জন্য সেরা মানের ডিজাইন এবং প্রিন্টিং পরিষেবা।</p>
                     <a href="#contact" class="cta-button mt-8">যোগাযোগ করুন <i class="fas fa-arrow-right ml-2"></i></a>
                 </div>
              </div>
@@ -83,7 +90,7 @@
                     <div class="service-card tilt-element"><i class="fas fa-object-group"></i><h3>ব্যানার ও ফ্লেক্স</h3><p>বড় আকারের আকর্ষণীয় ব্যানার ও ফ্লেক্স।</p></div>
                     <div class="service-card tilt-element"><i class="fas fa-mug-hot"></i><h3>কফি মগ প্রিন্টিং</h3><p>আপনার পছন্দের ডিজাইনে কাস্টমাইজড কফি মগ।</p></div>
                     <div class="service-card tilt-element"><i class="fas fa-tshirt"></i><h3>টি-শার্ট প্রিন্টিং</h3><p>যেকোনো ডিজাইন দিয়ে পার্সোনালাইজড টি-শার্ট।</p></div>
-                    <div class="service-card tilt-element"><i class="fas fa-gift"></i><h3>ফটো প্রিন্টিং</h3><p>আপনার মুহূর্তগুলোকে ফ্রেমে বন্দী করার জন্য।</p></div>
+                    <div class="service-card tilt-element"><i class="fas fa-palette"></i><h3>ওয়েবসাইট ডিজাইন</h3><p>আপনার ব্যবসার জন্য আধুনিক ও রেসপন্সিভ ওয়েবসাইট।</p></div>
                 </div>
             </div>
         </section>
@@ -105,7 +112,18 @@
             </div>
         </section>
 
-        <section id="why-us" class="hidden-section py-16 sm:py-24 bg-gray-50">
+        <section class="coming-soon-section hidden-section py-16 sm:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="icon-container text-5xl text-cyan-500 mb-6">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">আরও কাজ আসছে শীঘ্রই</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 mt-4 mb-8">আমরা আমাদের গ্যালারি আপডেট করছি সর্বশেষ কাজের সাথে। নতুন ডিজাইন এবং প্রোজেক্ট দেখতে শীঘ্রই ফিরে আসুন।</p>
+                <a href="#contact" class="cta-button">পোর্টফোলিওর দেখতে যোগাযোগ করুন</a>
+            </div>
+        </section>
+
+        <section id="why-us" class="hidden-section py-16 sm:py-24 bg-white">
              <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="section-title">কেন আমাদের বেছে নেবেন?</h2>
                 <div class="w-24 h-1 bg-cyan-500 mx-auto mt-4 mb-12"></div>
@@ -118,9 +136,9 @@
             </div>
         </section>
 
-        <section id="testimonials" class="hidden-section py-16 sm:py-24 bg-white"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><h2 class="section-title">আমাদের গ্রাহকরা যা বলেন</h2><div class="w-24 h-1 bg-cyan-500 mx-auto mt-4 mb-12"></div><div class="testimonial-slider-container relative max-w-3xl mx-auto"><div class="testimonial-slide"><p class="text-xl italic text-gray-600">"অসাধারণ কাজ! আমার ভিজিটিং কার্ডটা ঠিক যেমন চেয়েছিলাম, তেমনই হয়েছে।"</p><div class="stars my-4 text-cyan-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4 class="text-lg font-semibold text-gray-800">- রাহুল দাস</h4></div><div class="testimonial-slide"><p class="text-xl italic text-gray-600">"বন্ধুর জন্মদিনের জন্য কফি মগ বানিয়েছিলাম। ডিজাইন ও প্রিন্টিং কোয়ালিটি অসাধারণ ছিল।"</p><div class="stars my-4 text-cyan-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><h4 class="text-lg font-semibold text-gray-800">- প্রিয়াঙ্কা সাহা</h4></div><div class="testimonial-slide"><p class="text-xl italic text-gray-600">"মা বাবা স্টুডিওর সার্ভিস খুবই ভালো। আমি একটি টি-শার্ট প্রিন্ট করিয়েছিলাম, এবং আমি খুবই খুশি।"</p><div class="stars my-4 text-cyan-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4 class="text-lg font-semibold text-gray-800">- সুমন ঘোষ</h4></div></div><div class="slider-dots mt-8"></div></div></section>
+        <section id="testimonials" class="hidden-section py-16 sm:py-24 bg-gray-50"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><h2 class="section-title">আমাদের গ্রাহকরা যা বলেন</h2><div class="w-24 h-1 bg-cyan-500 mx-auto mt-4 mb-12"></div><div class="testimonial-slider-container relative max-w-3xl mx-auto"><div class="testimonial-slide"><p class="text-xl italic text-gray-600">"অসাধারণ কাজ! আমার ভিজিটিং কার্ডটা ঠিক যেমন চেয়েছিলাম, তেমনই হয়েছে।"</p><div class="stars my-4 text-cyan-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4 class="text-lg font-semibold text-gray-800">- রাহুল দাস</h4></div><div class="testimonial-slide"><p class="text-xl italic text-gray-600">"বন্ধুর জন্মদিনের জন্য কফি মগ বানিয়েছিলাম। ডিজাইন ও প্রিন্টিং কোয়ালিটি অসাধারণ ছিল।"</p><div class="stars my-4 text-cyan-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><h4 class="text-lg font-semibold text-gray-800">- প্রিয়াঙ্কা সাহা</h4></div><div class="testimonial-slide"><p class="text-xl italic text-gray-600">"মা বাবা স্টুডিওর সার্ভিস খুবই ভালো। আমি একটি টি-শার্ট প্রিন্ট করিয়েছিলাম, এবং আমি খুবই খুশি।"</p><div class="stars my-4 text-cyan-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4 class="text-lg font-semibold text-gray-800">- সুমন ঘোষ</h4></div></div><div class="slider-dots mt-8"></div></div></section>
         
-        <section id="contact" class="hidden-section py-16 sm:py-24 bg-gray-50">
+        <section id="contact" class="hidden-section py-16 sm:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center"><h2 class="section-title">যোগাযোগ করুন</h2><p class="section-subtitle">আপনার ধারণাগুলোকে বাস্তবে রূপ দিতে আজই আমাদের সাথে যোগাযোগ করুন।</p></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
@@ -133,7 +151,7 @@
                             <div class="contact-card-new"><i class="fas fa-map-marker-alt"></i><h4>Address</h4><p>Pankhatuli Mitrabagan Bibirgoli</p><a href="https://www.google.com/maps/search/?api=1&query=Pankhatuli+Mitrabagan+Bibirgoli" target="_blank">View Map</a></div>
                         </div>
                     </div>
-                    <div class="p-8 bg-white rounded-lg border border-gray-200 shadow-sm">
+                    <div class="p-8 bg-gray-50 rounded-lg border border-gray-200">
                         <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send us a Message</h3>
                         <form id="contact-form" class="space-y-6">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -147,6 +165,17 @@
                         </form>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="find-us" class="hidden-section py-16 sm:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                 <div class="p-8 bg-white rounded-lg border border-gray-200 shadow-sm">
+                     <h2 class="section-title mb-4">Find Us</h2>
+                     <i class="fas fa-map-marker-alt text-5xl text-cyan-500 my-6"></i>
+                     <p class="text-xl text-gray-600">Pankhatuli Mitrabagan Bibirgoli</p>
+                     <a href="https://www.google.com/maps/search/?api=1&query=Pankhatuli+Mitrabagan+Bibirgoli" target="_blank" class="cta-button-outline mt-6">Open in Google Maps</a>
+                 </div>
             </div>
         </section>
     </main>
