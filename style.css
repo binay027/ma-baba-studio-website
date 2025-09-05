@@ -13,7 +13,7 @@ body {
 .tagline { display: inline-block; padding: 4px 12px; background-color: #e0f2fe; color: #0369a1; border-radius: 999px; font-weight: 500; font-size: 0.875rem; }
 .cta-button { display: inline-block; padding: 14px 36px; border-radius: 8px; background: linear-gradient(to right, #38bdf8, #0ea5e9); color: white; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3); }
 .cta-button:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5); }
-.typing-cursor { animation: blink 0.7s infinite; color: #0ea5e9; }
+.typing-cursor { animation: blink 0.7s infinite; color: #fff; text-shadow: 0 0 5px #fff; }
 @keyframes blink { 50% { opacity: 0; } }
 .service-card { background-color: #f8fafc; padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease-in-out; transform-style: preserve-3d; }
 .service-card:hover { transform: translateY(-8px) perspective(1000px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-color: #38bdf8; }
