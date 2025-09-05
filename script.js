@@ -66,6 +66,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
     document.querySelectorAll('.hidden-section').forEach(section => observer.observe(section));
 
+    // Portfolio Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            portfolioItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                item.style.display = (filter === 'all' || filter === category) ? 'block' : 'none';
+            });
+        });
+    });
+
     // Back to Top Button
     const backToTopButton = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
@@ -74,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Particles.js
     if (document.getElementById('particles-js')) {
-        particlesJS('particles-js', {"particles":{"number":{"value":50,"density":{"enable":true,"value_area":800}},"color":{"value":"#0ea5e9"},"shape":{"type":"circle"},"opacity":{"value":0.5,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#0ea5e9","opacity":0.4,"width":1},"move":{"enable":true,"speed":3,"direction":"none","out_mode":"out"}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"}}},"retina_detect":true});
+        particlesJS('particles-js', {"particles":{"number":{"value":50,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle"},"opacity":{"value":0.7,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":3,"direction":"none","out_mode":"out"}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"}}},"retina_detect":true});
     }
     
     // Scroll Progress Bar
