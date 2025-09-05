@@ -23,15 +23,15 @@ body {
 @keyframes blink { 50% { opacity: 0; } }
 
 /* Service Card */
-.service-card-new { background-color: #f8fafc; padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease-in-out; }
-.service-card-new:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-color: #38bdf8; }
+.service-card-new { background-color: #f8fafc; padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease-in-out; transform-style: preserve-3d; }
+.service-card-new:hover { transform: translateY(-8px) perspective(1000px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-color: #38bdf8; }
 .service-card-new i { font-size: 2.5rem; padding: 20px; border-radius: 50%; background: linear-gradient(to right, #38bdf8, #0ea5e9); color: white; margin-bottom: 1.5rem; display: inline-block; }
 .service-card-new h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
 .service-card-new p { color: #64748b; }
 
 /* Portfolio Card */
-.portfolio-item-new { background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05); transition: all 0.3s ease-in-out; }
-.portfolio-item-new:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+.portfolio-item-new { background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05); transition: all 0.3s ease-in-out; transform-style: preserve-3d; }
+.portfolio-item-new:hover { transform: translateY(-8px) perspective(1000px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
 .portfolio-image-container { overflow: hidden; }
 .portfolio-item-new img { transition: transform 0.4s ease; }
 .portfolio-item-new:hover img { transform: scale(1.05); }
@@ -67,5 +67,4 @@ body {
 #particles-js { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; }
 #cursor-glow { position: fixed; width: 25px; height: 25px; border: 2px solid #0ea5e9; border-radius: 50%; left: 0; top: 0; pointer-events: none; transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s, background-color 0.2s; z-index: 10000; }
 a:hover ~ #cursor-glow, button:hover ~ #cursor-glow { width: 50px; height: 50px; background-color: rgba(14, 165, 233, 0.2); }
-.tilt-element { transform-style: preserve-3d; }
 
